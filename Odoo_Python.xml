@@ -1,0 +1,184 @@
+<!--@copyright Copyright (C) 2014 Leo Tran (leotran.hpvn@gmail.com). All rights reserved.
+#    @license http://www.gnu.org/licenses GNU Affero General Public License version 3 or later; see LICENSE.txt
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.-->
+<?xml version="1.0" encoding="UTF-8"?>
+<templateSet group="Odoo-Python">
+  <template name="__openerp__" value="{&#10;    &quot;name&quot;: &quot;name&quot;,&#10;    &quot;version&quot;: &quot;1.0&quot;,&#10;    &quot;depends&quot;: [&quot;base&quot;],&#10;    &quot;author&quot;: &quot;author&quot;,&#10;    &quot;category&quot;: &quot;category&quot;,&#10;    &quot;description&quot;: &quot;&quot;&quot;&#10;    This module provide :&#10;    &quot;&quot;&quot;,&#10;    &quot;init_xml&quot;: [],&#10;    'update_xml': [],&#10;    'demo_xml': [],&#10;    'installable': True,&#10;    'active': False,&#10;#    'certificate': 'certificate',&#10;}" description="__openerp__" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="_columns" value="_columns = {&#10;        &#10;}" description="_columns = {          }" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="_constraints" value="def _check_metho(self, cr, uid, ids): &#10;#TODO : check condition and return boolean accordingly&#10;    return True&#10;_constraints = [(_check_metho, 'Error: Invalid Message', ['field_name']), ] " description="check condition and return boolean accordingly" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="_defaults" value="_defaults = {  &#10;    'datee': lambda *a: time.strftime('%Y-%m-%d'),  &#10;}" description="_defaults" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="_description" value="_description = '__doc__'" description="_description = '__doc__'" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="_inherit" value="_inherit = 'openerpmodel' &#10;#Do not touch _name it must be same as _inherit&#10;#_name = 'openerpmodel'" description="_inherit" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="_inherits" value="_inherits = {  'openerpmodel': 'model_id'   }" description="_inherits" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="_name" value="_name = 'openerp'" description="model name" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="_order" value="_order = 'id'" description="_order" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="_date_name" value="_date_name = 'data'" description="_date_name" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="_parent_store" value="_parent_store = False" description="_parent_store" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="_rec_name" value="_rec_name = 'name'" description="_rec_name" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="_sequence" value="_sequence = data" description="_sequence" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="_sql_constraints" value="_sql_constraints = [('name_uniq', 'unique (name)', 'The Name of the OpenERPModel must be unique !'),]" description="_sql_constraints" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="_table" value="_table = 'openerp_model'" description="_table" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="fields.binary" value="'image':fields.binary('Label', filters=None)," description="fields.binary" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="fields.boolean" value="'sale_ok':fields.boolean('Label', required=False)," description="fields.boolean" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="fields.char" value="'name':fields.char('Label', size=64, required=False, readonly=False)," description="fields.char" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="fields.date" value="#TODO : import time required to get currect date&#10;'date': fields.date('Date')," description="fields.date" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="fields.datetime" value="#TODO : import time required to get currect datetime&#10;'datetime': fields.datetime('Date')," description="fields.datetime" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="fields.float" value="'number': fields.float('Label', digits=(16, int(config['price_accuracy']))," description="fields.float" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="fields.function" value="'data': fields.function(_function_call, method=True, type='float', string='Label', store=True)," description="fields.function" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="fields.integer" value="'number': fields.integer('Label')" description="fields.integer" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="fields.integer_big" value="'number': fields.integer_big('Label')" description="fields.integer_big" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="fields.many2many" value="'data_ids':fields.many2many('OpenerpModel', 'partner_category_rel', 'model1_id', 'model2_id', 'Label')," description="fields.many2many" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="fields.many2one" value="'data_id':fields.many2one('OpenerpModel', 'Label', required=False)" description="fields.many2one" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="fields.one2many" value="'data_ids':fields.one2many('OpenerpModel', 'field_id', 'Label', required=False)," description="fields.one2many" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="fields.property" value="'property_name': fields.property( &#10;    'OpenerpModel',&#10;    'type'='many2one',&#10;    'relation'='openerpmodel',&#10;    'string'='Label',&#10;    'method'=True,&#10;    'view_load'=True,&#10;    'domain'='[('state','=','done')]',&#10;    'help'='Helpdescrip'&#10;    'required'=True)," description="fields.property" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="fields.related" value="'field_id': fields.related('relation_field', 'field_id', type='many2one', relation='openerpmodel', string='Label')," description="fields.related" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="fields.selection" value="'state':fields.selection([&#10;    ('draft','Draft'),&#10;    ('done','Done'),&#10; ], 'State', select=True, readonly=True)," description="fields.selection" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="fields.selection[def_select_data]" value="'state': fields.selection(_get_states, 'data', required=True)," description="fields.selection[def_select_data]" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="fields.text" value="'note': fields.text('Description')," description="fields.text" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="fields.time" value="#TODO : import time required to get currect time&#10;'Sep 15, 2014': fields.time('Time')," description="fields.time" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+</templateSet>
+

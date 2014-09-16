@@ -1,0 +1,248 @@
+<!--@copyright Copyright (C) 2014 Leo Tran (leotran.hpvn@gmail.com). All rights reserved.
+#    @license http://www.gnu.org/licenses GNU Affero General Public License version 3 or later; see LICENSE.txt
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.-->
+<?xml version="1.0" encoding="UTF-8"?>
+<templateSet group="Odoo-XML">
+  <template name="openerp_tag" value="&lt;openerp&gt;&#10;    &lt;data&gt;&#10;    &#10;    &#10;    &lt;/data&gt;&#10;&lt;/openerp&gt;" description="openerp_tag" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XSL_TEXT" value="true" />
+      <option name="XML" value="true" />
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="act_window" value="&lt;act_window name=&quot;$string$&quot;&#10;    domain=&quot;[('field', 'condition', active_id)]&quot;&#10;    res_model=&quot;res_model&quot;&#10;    src_model=&quot;src_model&quot;&#10;    id=&quot;act_unique_id&quot;/&gt;" description="act_window" toReformat="false" toShortenFQNames="true">
+    <variable name="string" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XSL_TEXT" value="true" />
+      <option name="XML" value="true" />
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="button_object" value="&lt;button name=&quot;$function_name$&quot; states=&quot;$state$&quot; string=&quot;$string$&quot; type=&quot;$object$&quot; icon=&quot;$icon$&quot;/&gt;" description="button_object" toReformat="false" toShortenFQNames="true">
+    <variable name="function_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="state" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="string" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="object" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="icon" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XSL_TEXT" value="true" />
+      <option name="XML" value="true" />
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="button_wizard" value="&lt;button name='%($wizard_id$)d' type='action' string='$string$' states='$state$' icon=&quot;$icon$&quot;/&gt;" description="button_wizard" toReformat="false" toShortenFQNames="true">
+    <variable name="wizard_id" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="string" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="state" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="icon" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XSL_TEXT" value="true" />
+      <option name="XML" value="true" />
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="calendar_view" value="&lt;record model=&quot;ir.ui.view&quot; id=&quot;$object_name$_calendar_view&quot;&gt;&#10;    &lt;field name=&quot;name&quot;&gt;$objectname$ Calendar&lt;/field&gt;&#10;    &lt;field name=&quot;model&quot;&gt;$objectname$&lt;/field&gt;&#10;    &lt;field name=&quot;priority&quot; eval=&quot;2&quot;/&gt;&#10;    &lt;field name=&quot;arch&quot; type=&quot;xml&quot;&gt;&#10;    &#9;&lt;calendar string=&quot;Calendar View&quot;&#10;         date_start=&quot;date_action&quot; color=&quot;user_id&quot;&gt;&#10;             &lt;field name=&quot;name&quot;/&gt;&#10;        &lt;/calendar&gt;&#10;    &lt;/field&gt;&#10;&lt;/record&gt;" description="calendar_view" toReformat="false" toShortenFQNames="true">
+    <variable name="object_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="objectname" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XSL_TEXT" value="true" />
+      <option name="XML" value="true" />
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="graph_view" value="&lt;record model=&quot;ir.ui.view&quot; id=&quot;$object_name$_view_graph&quot;&gt;&#10;&#9;&lt;field name=&quot;name&quot;&gt;$objectname$&lt;/field&gt;&#10;&#9;&lt;field name=&quot;model&quot;&gt;$objectname$&lt;/field&gt;&#10;&#9;&lt;field name=&quot;arch&quot; type=&quot;xml&quot;&gt;&#10;&#9;&#9;&lt;graph string=&quot;Graph View&quot; type=&quot;pie, lines, areas, bars, radar&quot;&gt;&#10;&#9;&#9;&#9;&lt;field name=&quot;name&quot; /&gt;&#10;&#9;&#9;&lt;/graph&gt;&#10;&#9;&lt;/field&gt;&#10;&lt;/record&gt;" description="graph_view" toReformat="false" toShortenFQNames="true">
+    <variable name="object_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="objectname" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XSL_TEXT" value="true" />
+      <option name="XML" value="true" />
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="kanban_view" value="&lt;record model=&quot;ir.ui.view&quot; id=&quot;$object_name$_kanban_view&quot;&gt;&#10;&#9;&lt;field name=&quot;name&quot;&gt;$objectname$ Kanban&lt;/field&gt;&#10;&#9;&lt;field name=&quot;model&quot;&gt;$objectname$&lt;/field&gt;&#10;&#9;&lt;field name=&quot;arch&quot; type=&quot;xml&quot;&gt;&#10;&#9;&#9;&lt;kanban&gt;&#10;&#9;&#9;&#9;&lt;templates&gt;&#10;&#9;&#9;&#9;&#9;&lt;field name=&quot;name&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;t t-name=&quot;kanban-box&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;div&#10;&#9;&#9;&#9;&#9;&#9;&#9;t-attf-class=&quot;oe_kanban_color_#{kanban_getcolor(record.color.raw_value)} oe_kanban_card oe_kanban_global_click&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;div class=&quot;oe_dropdown_toggle oe_dropdown_kanban&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;span class=&quot;oe_e&quot;&gt;í&lt;/span&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;ul class=&quot;oe_dropdown_menu&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;t t-if=&quot;widget.view.is_action_enabled('edit')&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;li&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;a type=&quot;edit&quot;&gt;Edit...&lt;/a&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/li&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/t&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;t t-if=&quot;widget.view.is_action_enabled('delete')&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;li&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;a type=&quot;delete&quot;&gt;Delete&lt;/a&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/li&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/t&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;li&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;ul class=&quot;oe_kanban_colorpicker&quot; data-field=&quot;color&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/li&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/ul&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/div&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;div class=&quot;oe_kanban_content&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;div&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;b&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;field name=&quot;name&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/b&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;t t-if=&quot;record.name.raw_value&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;-&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;b&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;t t-esc=&quot;record.name.value&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;field name=&quot;name&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/b&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/t&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/div&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;div&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;field name=&quot;name&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/div&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;div class=&quot;oe_clear&quot;&gt;&lt;/div&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/div&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/div&gt;&#10;&#9;&#9;&#9;&#9;&lt;/t&gt;&#10;&#9;&#9;&#9;&lt;/templates&gt;&#10;&#9;&#9;&lt;/kanban&gt;&#10;&#9;&lt;/field&gt;&#10;&lt;/record&gt;" description="kanban_view" toReformat="false" toShortenFQNames="true">
+    <variable name="object_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="objectname" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XSL_TEXT" value="true" />
+      <option name="XML" value="true" />
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="menu_item_new" value="&lt;menuitem id=&quot;$object_name$_menu&quot; name=&quot;$objectname$&quot; parent=&quot;&quot; action=&quot;action_object_name_tree_view&quot;/&gt;" description="menu_item_new" toReformat="false" toShortenFQNames="true">
+    <variable name="object_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="objectname" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XSL_TEXT" value="true" />
+      <option name="XML" value="true" />
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="menu_item_parent" value="&lt;menuitem id=&quot;$object_name$_menu&quot; name=&quot;$object_name$&quot; /&gt;" description="menu_item_parent" toReformat="false" toShortenFQNames="true">
+    <variable name="object_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context />
+  </template>
+  <template name="report_dec" value="&lt;report id=&quot;$id$&quot; model=&quot;$objetname$&quot; name=&quot;$name$&quot; rml=&quot;$path_to_rml$&quot;&#10;&#9;string=&quot;$string$&quot; &#10;    &lt;!-- auto=&quot;False&quot; --&gt;&#10;&#9;&lt;!--    menu=&quot;False&quot; --&gt;&#10;&#9;&lt;!--    keyword=&quot;client_print_multi&quot; --&gt;&#10;            /&gt;" description="report_dec" toReformat="false" toShortenFQNames="true">
+    <variable name="id" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="objetname" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="path_to_rml" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="string" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XSL_TEXT" value="true" />
+      <option name="XML" value="true" />
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="search_view" value="&lt;record id=&quot;$object_name$_search_view&quot; model=&quot;ir.ui.view&quot;&gt;&#10;&#9;&lt;field name=&quot;name&quot;&gt;$objectname$.search&lt;/field&gt;&#10;&#9;&lt;field name=&quot;model&quot;&gt;$objectname$&lt;/field&gt;&#10;&#9;&lt;field name=&quot;arch&quot; type=&quot;xml&quot;&gt;&#10;&#9;&#9;&lt;search string=&quot;Search&quot;&gt;&#10;&#9;&#9;&#9;&lt;field name=&quot;Name&quot; string=&quot;Name&quot; filter_domain=&quot;[()]&quot; /&gt;&#10;&#9;&#9;&#9;&lt;separator /&gt;&#10;&#9;&#9;&#9;&lt;filter string=&quot;Open&quot; name=&quot;open&quot; domain=&quot;[('state','!=','cancel')]&quot;&#10;&#9;&#9;&#9;&#9;help=&quot;Open&quot; /&gt;&#10;&#10;&#9;&#9;&#9;&lt;group expand=&quot;0&quot; string=&quot;Group By...&quot;&gt;&#10;&#9;&#9;&#9;&#9;&lt;filter string=&quot;Name&quot; domain=&quot;[]&quot; context=&quot;{'group_by':'name'}&quot; /&gt;&#10;&#9;&#9;&#9;&lt;/group&gt;&#10;&#9;&#9;&lt;/search&gt;&#10;&#9;&lt;/field&gt;&#10;&lt;/record&gt;" description="search_view" toReformat="false" toShortenFQNames="true">
+    <variable name="object_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="objectname" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XSL_TEXT" value="true" />
+      <option name="XML" value="true" />
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="tree_view" value="&lt;record model=&quot;ir.ui.view&quot; id=&quot;$object_name$_tree_view&quot;&gt;&#10;                &lt;field name=&quot;name&quot;&gt;$objectname$.tree&lt;/field&gt;&#10;                &lt;field name=&quot;model&quot;&gt;$objectname$&lt;/field&gt;&#10;                &lt;field name=&quot;type&quot;&gt;tree&lt;/field&gt;&#10;                &lt;field name=&quot;arch&quot; type=&quot;xml&quot;&gt;&#10;                    &lt;tree string=&quot;$tree_string$&quot;&gt;&#10;                        &lt;field name=&quot;name&quot;/&gt;&#10;                    &lt;/tree&gt;&#10;                &lt;/field&gt;&#10;            &lt;/record&gt;" description="tree_view" toReformat="false" toShortenFQNames="true">
+    <variable name="object_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="objectname" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="tree_string" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XSL_TEXT" value="true" />
+      <option name="XML" value="true" />
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="tree_view_inherit" value="&lt;record model=&quot;ir.ui.view&quot; id=&quot;$object_name$_tree_view&quot;&gt;&#10;&#9;&lt;field name=&quot;name&quot;&gt;$objectname$.tree&lt;/field&gt;&#10;&#9;&lt;field name=&quot;model&quot;&gt;$objectname$&lt;/field&gt;&#10;&#9;&lt;field name=&quot;type&quot;&gt;tree&lt;/field&gt;&#10;&#9;&lt;field name=&quot;inherit_id&quot; ref=&quot;$view_name$&quot; /&gt;&#10;&#9;&lt;field name=&quot;arch&quot; type=&quot;xml&quot;&gt;&#10;&#9;&#9;&lt;tree string=&quot;$tree_string$&quot;&gt;&#10;&#9;&#9;&#9;&lt;field name=&quot;$field_name$&quot; position=&quot;$position$&quot; /&gt;&#10;&#9;&#9;&#9;&lt;field name=&quot;$new_field$&quot; /&gt;&#10;&#9;&#9;&lt;/tree&gt;&#10;&#9;&lt;/field&gt;&#10;&lt;/record&gt;" description="tree_view_inherit" toReformat="false" toShortenFQNames="true">
+    <variable name="object_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="objectname" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="view_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="tree_string" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="field_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="position" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="new_field" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XSL_TEXT" value="true" />
+      <option name="XML" value="true" />
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="view_action" value="&lt;record model=&quot;ir.actions.act_window&quot; id=&quot;action_$object_name$_tree_view&quot;&gt;&#10;    &lt;field name=&quot;name&quot;&gt;$objectname$&lt;/field&gt;&#10;    &lt;field name=&quot;type&quot;&gt;ir.actions.act_window&lt;/field&gt;&#10;    &lt;field name=&quot;res_model&quot;&gt;$objectname$&lt;/field&gt;&#10;&lt;!-- &lt;field name=&quot;domain&quot;&gt;[('field_name','condition',criteria)]&lt;/field&gt;--&gt;&#10;    &lt;field name=&quot;view_type&quot;&gt;form&lt;/field&gt;&#10;    &lt;field name=&quot;view_mode&quot;&gt;tree,form&lt;/field&gt;&#10;    &lt;field name=&quot;view_id&quot; ref=&quot;$object_name$_tree_view&quot;/&gt;&#10;&lt;/record&gt;" description="view_action" toReformat="false" toShortenFQNames="true">
+    <variable name="object_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="objectname" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XSL_TEXT" value="true" />
+      <option name="XML" value="true" />
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="wizard_dec" value="&lt;wizard&#10;&#9;&#9;&#9;string=&quot;$string$&quot;&#10;&#9;&#9;&#9;model=&quot;$objectname$&quot;&#10;&#9;&#9;&#9;name=&quot;$wizard_name$&quot;&#10;&#9;&#9;&#9;id=&quot;$wizrd_id$&quot;&#10;&#9;&#9;&#9;&lt;!--keyword=&quot;client_print_multi&quot; --&gt;&#10;&#9;&#9;&#9;/&gt;" description="wizard_dec" toReformat="false" toShortenFQNames="true">
+    <variable name="string" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="objectname" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="wizard_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="wizrd_id" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XSL_TEXT" value="true" />
+      <option name="XML" value="true" />
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="wizard_menu" value="&lt;menuitem &#10;&#9;&#9;action=&quot;$wizard_id$&quot; &#10;&#9;&#9;id=&quot;$unique_menu_id$&quot; &#10;&#9;&#9;parent=&quot;$parent_menu_id$&quot; &#10;&#9;&#9;type=&quot;$wizard$&quot;/&gt;" description="wizard_menu" toReformat="false" toShortenFQNames="true">
+    <variable name="wizard_id" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="unique_menu_id" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="parent_menu_id" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="wizard" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XSL_TEXT" value="true" />
+      <option name="XML" value="true" />
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="wizard_view_oe_7" value="&lt;record id=&quot;$object_name$_view&quot; model=&quot;ir.ui.view&quot;&gt;&#10;&#9;&lt;field name=&quot;name&quot;&gt;$objectname$&lt;/field&gt;&#10;&#9;&lt;field name=&quot;model&quot;&gt;$objectname$&lt;/field&gt;&#10;&#9;&lt;field name=&quot;arch&quot; type=&quot;xml&quot;&gt;&#10;&#9;&#9;&lt;form string=&quot;OpenERP Wizard&quot;&gt;&#10;&#9;&#9;&#9;&lt;p class=&quot;oe_grey&quot;&gt;&#10;&#9;&#9;&#9;&#9;OpenERP Wizard View&#10;&#9;&#9;&#9;&lt;/p&gt;&#10;&#9;&#9;&#9;&lt;group&gt;&#10;&#9;&#9;&#9;&#9;&lt;field name=&quot;name&quot; /&gt;&#10;&#9;&#9;&#9;&lt;/group&gt;&#10;&#9;&#9;&#9;&lt;footer&gt;&#10;&#9;&#9;&#9;&#9;&lt;button name=&quot;name&quot; string=&quot;Button Name&quot; type=&quot;object&quot; class=&quot;oe_highlight&quot; /&gt;&#10;&#9;&#9;&#9;&#9;or&#10;&#9;&#9;&#9;&#9;&lt;button string=&quot;Cancel&quot; class=&quot;oe_link&quot; special=&quot;cancel&quot; /&gt;&#10;&#9;&#9;&#9;&lt;/footer&gt;&#10;&#9;&#9;&lt;/form&gt;&#10;&#9;&lt;/field&gt;&#10;&lt;/record&gt;&#10;&#10;&lt;record id=&quot;action_$object_name$&quot; model=&quot;ir.actions.act_window&quot;&gt;&#10;&#9;&lt;field name=&quot;name&quot;&gt;$objectname$&lt;/field&gt;&#10;&#9;&lt;field name=&quot;type&quot;&gt;ir.actions.act_window&lt;/field&gt;&#10;&#9;&lt;field name=&quot;res_model&quot;&gt;$objectname$&lt;/field&gt;&#10;&#9;&lt;field name=&quot;view_type&quot;&gt;form&lt;/field&gt;&#10;&#9;&lt;field name=&quot;view_mode&quot;&gt;form&lt;/field&gt;&#10;&#9;&lt;field name=&quot;view_id&quot; ref=&quot;$object_name$_view&quot; /&gt;&#10;&#9;&lt;field name=&quot;target&quot;&gt;new&lt;/field&gt;&#10;&#9;&lt;field name=&quot;multi&quot;&gt;True&lt;/field&gt;&#10;&lt;/record&gt;" description="wizard_view_oe_7" toReformat="false" toShortenFQNames="true">
+    <variable name="object_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="objectname" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XSL_TEXT" value="true" />
+      <option name="XML" value="true" />
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="workflow_dec" value="&lt;record id=&quot;act_$statename$&quot; model=&quot;workflow.activity&quot;&gt;&#10;    &lt;field name=&quot;wkf_id&quot; ref=&quot;wkf&quot;/&gt;&#10;    &lt;!--&lt;field name=&quot;flow_start&quot;&gt;True&lt;/field&gt;--&gt;&#10;    &lt;!--&lt;field name=&quot;flow_stop&quot;&gt;True&lt;/field&gt;--&gt;&#10;    &lt;field name=&quot;name&quot;&gt;$statename$&lt;/field&gt;&#10;    &lt;field name=&quot;action&quot;&gt;$function$&lt;/field&gt;&#10;    &lt;field name=&quot;kind&quot;&gt;function&lt;/field&gt;&#10;&lt;/record&gt;" description="workflow_dec" toReformat="false" toShortenFQNames="true">
+    <variable name="statename" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="function" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XSL_TEXT" value="true" />
+      <option name="XML" value="true" />
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="workflow_trans" value="&lt;record id=&quot;$transition_id$&quot; model=&quot;workflow.transition&quot;&gt;&#10;    &lt;field name=&quot;act_from&quot; ref=&quot;$from_state$&quot;/&gt;&#10;    &lt;field name=&quot;act_to&quot; ref=&quot;$to_state$&quot;/&gt;&#10;    &lt;field name=&quot;signal&quot;&gt;$signal_name$&lt;/field&gt;&#10;&lt;!-- &lt;field name=&quot;role_id&quot; ref=&quot;$role_id$&quot;/&gt; --&gt;&#10;&lt;!-- &lt;field name=&quot;condition&quot;&gt;$condition_function$&lt;/field&gt; --&gt;&#10;&lt;/record&gt;" description="workflow_trans" toReformat="false" toShortenFQNames="true">
+    <variable name="transition_id" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="from_state" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="to_state" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="signal_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="role_id" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="condition_function" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XSL_TEXT" value="true" />
+      <option name="XML" value="true" />
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="form_view" value="&lt;record id=&quot;$object_name$_form_view&quot; model=&quot;ir.ui.view&quot;&gt;&#10;&#9;&lt;field name=&quot;name&quot;&gt;$objectname$.form&lt;/field&gt;&#10;&#9;&lt;field name=&quot;model&quot;&gt;$objectname$&lt;/field&gt;&#10;&#9;&lt;field name=&quot;priority&quot; eval=&quot;8&quot; /&gt;&#10;&#9;&lt;field name=&quot;arch&quot; type=&quot;xml&quot;&gt;&#10;&#9;&#9;&lt;form string=&quot;OpenERP&quot;&gt;&#10;&#9;&#9;&#9;&lt;header&gt;&#10;&#9;&#9;&#9;&#9;&lt;button name=&quot;action_button&quot; string=&quot;Button Name&quot; type=&quot;object&quot;&#10;&#9;&#9;&#9;&#9;&#9;class=&quot;oe_highlight&quot; /&gt;&#10;&#9;&#9;&#9;&lt;/header&gt;&#10;&#9;&#9;&#9;&lt;sheet&gt;&#10;&#9;&#9;&#9;&#9;&lt;group colspan=&quot;4&quot; col=&quot;4&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;field name=&quot;name&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;/group&gt;&#10;&#9;&#9;&#9;&lt;/sheet&gt;&#10;&#9;&#9;&lt;/form&gt;&#10;&#9;&lt;/field&gt;&#10;&lt;/record&gt;" description="form_view" toReformat="false" toShortenFQNames="true">
+    <variable name="object_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="objectname" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XSL_TEXT" value="true" />
+      <option name="XML" value="true" />
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="form_view_inherit" value="&lt;record model=&quot;ir.ui.view&quot; id=&quot;$object_name$_form_view&quot;&gt;&#10;&#9;&lt;field name=&quot;name&quot;&gt;$objectname$.form&lt;/field&gt;&#10;&#9;&lt;field name=&quot;model&quot;&gt;$objectname$&lt;/field&gt;&#10;&#9;&lt;field name=&quot;type&quot;&gt;form&lt;/field&gt;&#10;&#9;&lt;field name=&quot;inherit_id&quot; ref=&quot;$view_name$&quot; /&gt;&#10;&#9;&lt;field name=&quot;arch&quot; type=&quot;xml&quot;&gt;&#10;&#9;&#9;&lt;form string=&quot;$form_string$&quot;&gt;&#10;&#9;&#9;&#9;&lt;field name=&quot;$field_name$&quot; position=&quot;$position$&quot; /&gt;&#10;&#9;&#9;&#9;&lt;field name=&quot;$new_field$&quot; /&gt;&#10;&#9;&#9;&lt;/form&gt;&#10;&#9;&lt;/field&gt;&#10;&lt;/record&gt;" description="form_view_inherit" toReformat="false" toShortenFQNames="true">
+    <variable name="object_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="objectname" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="view_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="form_string" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="field_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="position" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="new_field" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XSL_TEXT" value="true" />
+      <option name="XML" value="true" />
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="form_view_notebook" value="&lt;record model=&quot;ir.ui.view&quot; id=&quot;$object_name$_form_view&quot;&gt;&#10;&#9;&lt;field name=&quot;name&quot;&gt;$objectname$.form&lt;/field&gt;&#10;&#9;&lt;field name=&quot;model&quot;&gt;$objectname$&lt;/field&gt;&#10;&#9;&lt;field name=&quot;type&quot;&gt;form&lt;/field&gt;&#10;&#9;&lt;field name=&quot;arch&quot; type=&quot;xml&quot;&gt;&#10;&#9;&#9;&lt;form string=&quot;$form_string$&quot;&gt;&#10;&#9;&#9;&#9;&lt;notebook&gt;&#10;&#9;&#9;&#9;&#9;&lt;page string=&quot;$page_name$&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;field name=&quot;name&quot; select=&quot;1&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;/page&gt;&#10;&#9;&#9;&#9;&lt;/notebook&gt;&#10;&#9;&#9;&lt;/form&gt;&#10;&#9;&lt;/field&gt;&#10;&lt;/record&gt;" description="form_view_notebook" toReformat="false" toShortenFQNames="true">
+    <variable name="object_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="objectname" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="form_string" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="page_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XSL_TEXT" value="true" />
+      <option name="XML" value="true" />
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="complete_view" value="&lt;record id=&quot;$object_name$_tree_view&quot; model=&quot;ir.ui.view&quot;&gt;&#10;&#9;&lt;field name=&quot;name&quot;&gt;$objectname$.tree&lt;/field&gt;&#10;&#9;&lt;field name=&quot;model&quot;&gt;$objectname$&lt;/field&gt;&#9;&#9;&#10;&#9;&lt;field name=&quot;type&quot;&gt;tree&lt;/field&gt;&#10;&#9;&lt;field name=&quot;arch&quot; type=&quot;xml&quot;&gt;&#10;&#9;&#9;&lt;tree string=&quot;$tree_string$&quot;&gt;&#10;&#9;&#9;&#9;&lt;field name=&quot;name&quot; /&gt;&#10;&#9;&#9;&lt;/tree&gt;&#10;&#9;&lt;/field&gt;&#10;&lt;/record&gt;&#10;&#10;&lt;record id=&quot;$object_name$_form_view&quot; model=&quot;ir.ui.view&quot;&gt;&#10;&#9;&lt;field name=&quot;name&quot;&gt;$objectname$.form&lt;/field&gt;&#10;&#9;&lt;field name=&quot;model&quot;&gt;$objectname$&lt;/field&gt;&#10;&#9;&lt;field name=&quot;priority&quot; eval=&quot;8&quot; /&gt;&#10;&#9;&lt;field name=&quot;arch&quot; type=&quot;xml&quot;&gt;&#10;&#9;&#9;&lt;form string=&quot;OpenERP&quot;&gt;&#10;&#9;&#9;&#9;&lt;header&gt;&#10;&#9;&#9;&#9;&#9;&lt;button name=&quot;action_button&quot; string=&quot;Button Name&quot; type=&quot;object&quot;&#10;&#9;&#9;&#9;&#9;&#9;class=&quot;oe_highlight&quot; /&gt;&#10;&#9;&#9;&#9;&lt;/header&gt;&#10;&#9;&#9;&#9;&lt;sheet&gt;&#10;&#9;&#9;&#9;&#9;&lt;group colspan=&quot;4&quot; col=&quot;4&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;field name=&quot;name&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;/group&gt;&#10;&#9;&#9;&#9;&lt;/sheet&gt;&#10;&#9;&#9;&lt;/form&gt;&#10;&#9;&lt;/field&gt;&#10;&lt;/record&gt;&#10;&#10;&lt;record id=&quot;$object_name$_search_view&quot; model=&quot;ir.ui.view&quot;&gt;&#10;&#9;&lt;field name=&quot;name&quot;&gt;$objectname$.search&lt;/field&gt;&#10;&#9;&lt;field name=&quot;model&quot;&gt;$objectname$&lt;/field&gt;&#10;&#9;&lt;field name=&quot;arch&quot; type=&quot;xml&quot;&gt;&#10;&#9;&#9;&lt;search string=&quot;Search&quot;&gt;&#10;&#9;&#9;&#9;&lt;field name=&quot;Name&quot; string=&quot;name&quot; filter_domain=&quot;[()]&quot; /&gt;&#10;&#9;&#9;&#9;&lt;separator /&gt;&#10;&#9;&#9;&#9;&lt;filter string=&quot;Open&quot; name=&quot;open&quot; domain=&quot;[('state','!=','cancel')]&quot;&#10;&#9;&#9;&#9;&#9;help=&quot;Open&quot; /&gt;&#10;&#10;&#9;&#9;&#9;&lt;group expand=&quot;0&quot; string=&quot;Group By...&quot;&gt;&#10;&#9;&#9;&#9;&#9;&lt;filter string=&quot;Name&quot; domain=&quot;[]&quot; context=&quot;{'group_by':'name'}&quot; /&gt;&#10;&#9;&#9;&#9;&lt;/group&gt;&#10;&#9;&#9;&lt;/search&gt;&#10;&#9;&lt;/field&gt;&#10;&lt;/record&gt;&#10;&#10;&lt;record model=&quot;ir.actions.act_window&quot; id=&quot;action_$object_name$_tree_view&quot;&gt;&#10;&#9;&lt;field name=&quot;name&quot;&gt;$objectname$&lt;/field&gt;&#10;&#9;&lt;field name=&quot;type&quot;&gt;ir.actions.act_window&lt;/field&gt;&#10;&#9;&lt;field name=&quot;res_model&quot;&gt;$objectname$&lt;/field&gt;&#10;&#9;&lt;field name=&quot;view_type&quot;&gt;form&lt;/field&gt;&#10;&#9;&lt;field name=&quot;view_mode&quot;&gt;tree,form&lt;/field&gt;&#10;&#9;&lt;field name=&quot;search_view_id&quot; ref=&quot;$object_name$_search_view&quot; /&gt;&#10;&#9;&lt;!-- &lt;field name=&quot;domain&quot;&gt;[('field_name','condition',criteria)]&lt;/field&gt; --&gt;&#10;&#9;&lt;field name=&quot;context&quot;&gt;{}&lt;/field&gt;&#10;&lt;/record&gt;" description="complete_view" toReformat="false" toShortenFQNames="true">
+    <variable name="object_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="objectname" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="tree_string" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XSL_TEXT" value="true" />
+      <option name="XML" value="true" />
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+</templateSet>
+
