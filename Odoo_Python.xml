@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!--@copyright Copyright (C) 2014 Leo Tran (leotran.hpvn@gmail.com). All rights reserved.
 #    @license http://www.gnu.org/licenses GNU Affero General Public License version 3 or later; see LICENSE.txt
 #
@@ -13,7 +14,6 @@
 #
 #    You should have received a copy of the GNU Affero General Public License
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.-->
-<?xml version="1.0" encoding="UTF-8"?>
 <templateSet group="Odoo-Python">
   <template name="__openerp__" value="{&#10;    &quot;name&quot;: &quot;name&quot;,&#10;    &quot;version&quot;: &quot;1.0&quot;,&#10;    &quot;depends&quot;: [&quot;base&quot;],&#10;    &quot;author&quot;: &quot;author&quot;,&#10;    &quot;category&quot;: &quot;category&quot;,&#10;    &quot;description&quot;: &quot;&quot;&quot;&#10;    This module provide :&#10;    &quot;&quot;&quot;,&#10;    &quot;init_xml&quot;: [],&#10;    'update_xml': [],&#10;    'demo_xml': [],&#10;    'installable': True,&#10;    'active': False,&#10;#    'certificate': 'certificate',&#10;}" description="__openerp__" toReformat="false" toShortenFQNames="true">
     <context>

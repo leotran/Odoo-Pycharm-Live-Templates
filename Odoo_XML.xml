@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!--@copyright Copyright (C) 2014 Leo Tran (leotran.hpvn@gmail.com). All rights reserved.
 #    @license http://www.gnu.org/licenses GNU Affero General Public License version 3 or later; see LICENSE.txt
 #
@@ -13,7 +14,6 @@
 #
 #    You should have received a copy of the GNU Affero General Public License
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.-->
-<?xml version="1.0" encoding="UTF-8"?>
 <templateSet group="Odoo-XML">
   <template name="openerp_tag" value="&lt;openerp&gt;&#10;    &lt;data&gt;&#10;    &#10;    &#10;    &lt;/data&gt;&#10;&lt;/openerp&gt;" description="openerp_tag" toReformat="false" toShortenFQNames="true">
     <context>
